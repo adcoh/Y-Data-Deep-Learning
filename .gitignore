@@ -2,3 +2,10 @@
 *.pptx
 *.gdoc
 *.pdf
+*.DS_Store
+*.tar
+*.ipynb_checkpoints
+/wandb/*
+**/wandb
+**/VOCDevkit
+**/VOCdevkit
