@@ -9,3 +9,5 @@
 **/wandb
 **/VOCDevkit
 **/VOCdevkit
+**/*.code-workspace
+**/*.vscode

@@ -1,3 +1,9 @@
 {
-    "python.pythonPath": "/Users/Adam/.ve/yandex/bin/python3.7"
+    "python.pythonPath": "/Users/Adam/.ve/yandex/bin/python3.7",
+    "files.exclude": {
+        "**/.ipynb_checkpoints": true,
+        "**/*.pptx": true
+    },
+    "git.autofetch": true,
+    "git.ignoreLimitWarning": true
 }
