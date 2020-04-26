@@ -11,3 +11,6 @@
 **/VOCdevkit
 **/*.code-workspace
 **/*.vscode
+**/*.tsv
+**/*.md
+**/*.zip
