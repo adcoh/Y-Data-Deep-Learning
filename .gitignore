@@ -14,3 +14,7 @@
 **/*.tsv
 **/*.md
 **/*.zip
+*.DS_Store
+**/__pycache__
+Week 4/__pycache__/networks.cpython-37.pyc
+Week 4/__pycache__/utils.cpython-37.pyc

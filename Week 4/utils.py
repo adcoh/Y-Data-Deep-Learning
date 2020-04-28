@@ -6,6 +6,7 @@ from torch.utils.data import DataLoader, Dataset
 from torch.autograd import Variable
 import numpy as np
 from math import exp
+import matplotlib.pyplot as plt
 
 
 def show_images(image_dict):

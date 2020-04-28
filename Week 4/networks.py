@@ -1,3 +1,4 @@
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import models 
@@ -196,7 +197,6 @@ class network6(network5):
         self.conv5 = nn.Conv2d(32, 3, 1)
         
     def forward(self, x):
-        h, w = x.shape[-2:]
         out = self.backbone(x)
         # print('backbone layer output shape: ', out.shape)
         x = F.leaky_relu(self.conv1(x))
@@ -209,7 +209,6 @@ class network6(network5):
         # print('Concatenated output shape: ', x.shape)
         x = F.pixel_shuffle(x, upscale_factor=2)
         # print('1st upsample layer output shape: ', x.shape)
-        h, w = x.shape[-2:]
         x_mid = F.leaky_relu(self.conv3(x))
         # print('Mid_output shape: ', x_mid.shape)
         x = F.leaky_relu(self.conv4(x))
