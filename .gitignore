@@ -2,7 +2,7 @@
 *.pptx
 *.gdoc
 *.pdf
-*.DS_Store
+**/.DS_Store
 *.tar
 *.ipynb_checkpoints
 /wandb/*
