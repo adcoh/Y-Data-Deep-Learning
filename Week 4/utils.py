@@ -1,3 +1,5 @@
+import os
+import cv2
 import torch
 import torch.nn.functional as F
 from torch.utils.data import DataLoader, Dataset
@@ -5,6 +7,20 @@ from torch.autograd import Variable
 import numpy as np
 from math import exp
 
+
+def show_images(image_dict):
+    """Function to display images from three-image-tuple from VOC2007Dataset class
+    Args:
+        image_dict (dict): contains three different-sized image tensors of the same content 
+    """
+    f = plt.figure(figsize=(16, 6))
+    n = 1
+    for key, img in image_dict.items():
+        ax = f.add_subplot(1, len(image_dict), n)
+        img = img.detach().permute(1, 2, 0).numpy()
+        ax.imshow(img)
+        ax.title.set_text(key)
+        n += 1
 
 class VOC2007Dataset(Dataset):
     """ 
