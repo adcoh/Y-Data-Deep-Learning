@@ -18,7 +18,7 @@ def show_images(image_dict):
     n = 1
     for key, img in image_dict.items():
         ax = f.add_subplot(1, len(image_dict), n)
-        img = img.detach().permute(1, 2, 0).numpy()
+        img = img.cpu().detach().permute(1, 2, 0).numpy()
         ax.imshow(img)
         ax.title.set_text(key)
         n += 1
