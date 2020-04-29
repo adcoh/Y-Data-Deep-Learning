@@ -70,7 +70,7 @@ class VOC2007Dataset(Dataset):
         Returns:
             tuple: (image, target) where target is a dictionary of the XML tree.
         """
-        img = cv2.imread(self.images[index], cv2.IMREAD_COLOR)
+        img = cv2.cvtColor(cv2.imread(self.images[index]), cv2.COLOR_BGR2RGB)
         img_large = cv2.resize(img, (288, 288))
         img_mid = cv2.resize(img, (144, 144))
         img_small = cv2.resize(img, (72, 72))
