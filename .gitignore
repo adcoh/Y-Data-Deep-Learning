@@ -14,5 +14,5 @@
 **/*.tsv
 **/*.md
 **/*.zip
-**/*__pycache__
 Week 4/Untitled.ipynb
+**/*pycache
